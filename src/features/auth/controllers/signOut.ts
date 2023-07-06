@@ -1,0 +1,8 @@
+import { Request, Response } from 'express';
+import HTTP_STATUS from 'http-status-codes';
+export class SignOut {
+  public async Logout(req: Request, res: Response): Promise<void> {
+    req.session = null;
+    res.status(HTTP_STATUS.OK).json({ message: 'User Logged Out Successfully', user: {}, token: '' });
+  }
+}

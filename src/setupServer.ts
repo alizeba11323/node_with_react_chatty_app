@@ -8,11 +8,11 @@ import helmet from 'helmet';
 import hpp from 'hpp';
 import cookieSession from 'cookie-session';
 import HTTP_STATUS from 'http-status-codes';
-import { config } from './config';
+import { config } from '@root/config';
 import compression from 'compression';
 import 'express-async-errors';
-import applicationRoutes from './routes';
-import { CustomError, IErrorResponse } from './shared/globals/Error-Handler';
+import applicationRoutes from '@root/routes';
+import { CustomError, IErrorResponse } from '@global/helpers/Error-Handler';
 const HTTP_PORT = 5000;
 const log = config.createLogger('server');
 export class ChattyServer {
